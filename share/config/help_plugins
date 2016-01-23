@@ -17,24 +17,24 @@
 --------------------
 [-] !addroom <nick> [-CC <country code>] [-ac <min_auto_class>][-AC <max_auto_class>][-c <min_class>][-t <topic>]  Create a chatroom named nick. When specifying the nickname, make sure to respect nickname rules. See below the table for more information regarding the parameters
 [-] !delroom <nick>  Removes specified chat room
-[-] !lstroom  Lists all available chatrooms
 [-] +invite <online_users_nick> <invite message>  Invites a person into the chatroom with an optional invitation message
 [-] +leave  User can use this command to leave the room; no messages from the chatroom will be received
+[-] !lstroom  Lists all available chatrooms
 [-] +out <nick>  Excludes a user from the chatroom. This command is different from the previous one because can be used by OP to exclude a user from the room
 --------------------
 [--] Floodprot
 --------------------
 The plugin does not provide any commands but it will add three new configuration variables:
+[-] bantime_on_flood  number of seconds to ban the flooder
 [-] max_conn_per_ip  represents the maximum number of connection per IP. Set to 1 to allow one IP per user
 [-] max_users_per_ip  represents the maximum number of users per IP. Set to 1 to allow one IP per user
-[-] bantime_on_flood  number of seconds to ban the flooder
 --------------------
 [--] Forbid
 --------------------
 [-] !addforbid <pattern> [-C <max_class>] [-f <flags>] [-r <kick_reason>]  Adds a forbidden pattern. See below the table for more information regarding the parameters
 [-] !delforbid <pattern>  Deletes forbidden pattern
-[-] !modforbid <pattern>  Modifies forbidden pattern. See below the table for more information regarding the parameters
 [-] !lstforbid  Lists forbidden patterns
+[-] !modforbid <pattern>  Modifies forbidden pattern. See below the table for more information regarding the parameters
 --------------------
 [--] Ip log
 --------------------
@@ -47,17 +47,17 @@ The plugin does not provide any commands but it will add three new configuration
 --------------------
 [-] !addisp <iprange> <other_parameters>  Add new ISP. See below the table for more information regarding the parameters
 [-] !delisp <ipmin/iprange>  Deletes the given ISP. See below the table for more information regarding the parameters
-[-] !modisp <iprange> <other_parameters>  Edit existing ISP. See below the table for more information regarding the parameters
 [-] !lstisp  Give a list of ISPs
+[-] !modisp <iprange> <other_parameters>  Edit existing ISP. See below the table for more information regarding the parameters
 --------------------
 [--] Lua
 --------------------
-[-] !luaload <script>  Loads specified LUA script using relative path to VerliHub config folder
-[-] !luaunload <script / ID>  Unloads specified LUA script using relative path to VerliHub config folder or script ID as proposed with lualist command
-[-] !luareload <script / ID>  Reload a script, instead of using !luaunload and then !luaload or script ID as proposed with lualist command
-[-] !lualist  Lists loaded LUA scripts
-[-] !lualog <enable (0/1)>  Enable or disable LUA debug when you load a new script
 [-] !luainfo  Show information about running scripts
+[-] !lualist  Lists loaded LUA scripts
+[-] !luaload <script>  Loads specified LUA script using relative path to VerliHub config folder
+[-] !lualog <enable (0/1)>  Enable or disable LUA debug when you load a new script
+[-] !luareload <script / ID>  Reload a script, instead of using !luaunload and then !luaload or script ID as proposed with lualist command
+[-] !luaunload <script / ID>  Unloads specified LUA script using relative path to VerliHub config folder or script ID as proposed with lualist command
 [-] !luaversion  Show information about LUA library
 --------------------
 [--] Messanger
@@ -67,11 +67,11 @@ The plugin does not provide any commands but it will add three new configuration
 --------------------
 [--] Python
 --------------------
-[-] !pyload <script>  Loads specified Python script using relative path to VerliHub config folder
-[-] !pyunload <script / ID>  Unloads specified Python script using relative path to VerliHub config folder or script ID as proposed with lualist command
-[-] !pyreload <script / ID>  Reload a script, instead of using !pyunload and then !pyload or script ID as proposed with lualist command
 [-] !pylist  Lists loaded Python scripts
+[-] !pyload <script>  Loads specified Python script using relative path to VerliHub config folder
 [-] !pylog <enable (0/1)>  Enable or disable Python debug when you load a new script
+[-] !pyreload <script / ID>  Reload a script, instead of using !pyunload and then !pyload or script ID as proposed with lualist command
+[-] !pyunload <script / ID>  Unloads specified Python script using relative path to VerliHub config folder or script ID as proposed with lualist command
 --------------------
 [--] Replacer
 --------------------
