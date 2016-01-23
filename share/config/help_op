@@ -1,5 +1,5 @@
 --------------------
-OPERATOR (class 3) [Some commands may not be available depending of hub configuration]
+[--] OPERATOR (class 3) [Some commands may not be available depending of hub configuration]
 --------------------
 [-] !admins <msg>                       Broadcast to administrators (class 5)
 [-] !ban_time <nick/ip> <reason>        Temporarily bans a nickname or IP for the specified time (_time). Valid entries for time are Ns, Nm, Nh, Nd, NM, Nw, Ny where N is a number. If you do not include a time, then the ban is permanent. Perform the same action of !ban command
