@@ -17,70 +17,70 @@
 [-] !ccbroadcast <:CC:> <msg>           Sends a broadcast to users with the  specified country code(s) only
 [-] !cheefs <msg>                       Broadcast to cheefs (class 4)
 [-] !class <nickname> <new_class>       Temporarily change the class (max to 5) of a user. Action will disappear at hub restarting
-[-] !drop <nick>                 Disconnects user from hub without kicking him
-[-] !gag <nickname> [time]       Mute a user in main chat for the time specified (default is 7 days)
-[-] !gc                          Prints a list of all configuration variables
-[-] !getinfo <nickname>          Return IP address and hostname (if dns_lookup is set to 1)
-[-] !gethost <nickname>          Return hostname (if dns_lookup is set to 1)
-[-] !guests <msg>                Broadcast to guests (class 0)
-[-] !hidekick <nick> <reason>    Kicks a user and does not announce it to the hub
-[-] !hideme <class>              Hides yourself from users below the specified class
-[-] !hubinfo                      Show information about the hub
-[-] !hublist                     Send your hub information to the public hublist
-[-] !infoban <keyword>           Lists all possible matches for what you entered as keyword (nick, IP, range). 
-[-] !infobanip <ip>              Lists all bans for specifyed IP
-[-] !infobannnick <nick>         Lists all bans for specifyed nickname
-[-] !infobanrange <ip>           Lists all bans for specifyed IP that belongs to a range
-[-] !infoban_banrange_           Shows all current banned ranges
-[-] !infoban_ipban_              Shows all current IP bans
-[-] !infoban_nickban_            Shows all current nickbans
-[-] !kick <nick> <reason>        Kick a users temporarily, so user will not be able to rejoin until a number of seconds will expire
-[-] !kvip <nickname> [time]      Let user to kick other usersfor the time specified (default is 7 days)
-[-] !lsban <limit>               Shows the most recent bans. Use <limit> to limit results
-[-] !masters <msg>               Broadcast to masters (class 10)
-[-] !mayopchat <nick> [time]     Allows user to enter in the OPChat for the time specified (default is 7 days)
-[-] !mayreg <nickname> [time]    Allow user to register other users for the time specified (default is 7 days)
-[-] !nopm <nickname> [time]      Prevent a user from send private messages for the time specified (default is 7 days)
-[-] !nosearch <nickname> [time]  Prevent users from searching for the time specified (default is 7 days)
-[-] !ops <msg>                   Broadcast to operators (class 3)
-[-] !regclass <nickname> <new_class>  Change the class of a user based on given nickname
-[-] !regdelete <nickname>        Removing a registered user based on given nickname
-[-] !regdisable <nickname>       Temporarily disable a registered nickname without permanently removing it from the database
-[-] !regenable <nickname>        Enable a temporarily disabled user with !regdisable command
-[-] !reginfo <nickname>          See all information about a registered user
-[-] !regnewuser <nickname> <class>    Register a new user with given class
-[-] !regpass <nickname> <password>    Set user password
-[-] !regprotect <nickname> <class>    Protect a user from the class minor or equal of the given value
-[-] !regs <msg>                  Broadcast to registered users (class 1)
-[-] !reload                      Reloads verlihub's configuration
-[-] !set <variable> <new_value>  Change value of variables
-[-] !topic <topic>               Change the topic shown in the top of the client window
-[-] !unban <ip_or_nick> <reason> Removes ban(s) from nickname or IP
-[-] !unbanemail <email> <reason> Removes a e-mail ban
-[-] !unbannick <nick> <reason>   Removes nickname ban(s)
-[-] !unbanhost1 <hostname> <reason>    Removes a first level hostname ban
-[-] !unbanhost2 <hostname> <reason>    Removes a second level hostname ban
-[-] !unbanhost3 <hostname> <reason>    Removes a third level hostname ban
-[-] !unbanhostr1 <hostname> <reason>   Removes the leftmost part of a hostname ban
-[-] !unbanip <ip> <reason>             Removes only existing ban(s) for IP
-[-] !unbanprefix <prefix> <reason>     Removes a nickname prefix ban
-[-] !unbanshare <share> <reason>       Removes a share size ban. Specify the exact share in bytes
-[-] !unbanrange <range> <reason>       Removes a range of IP bans. <range> may be the range, or any IP in the range
-[-] !unban emailban <reason>           Removes ALL current e-mail bans
-[-] !unban hostban <reason>            Removes ALL current host bans
-[-] !unban ipban <reason>              Removes ALL current IP bans
-[-] !unban nickban <reason>            Removes ALL current nick bans
-[-] !unban rangeban <reason>           Removes ALL current range bans
-[-] !unban shareban <reason>           Removes ALL current share bans
-[-] !unban tempban <reason>            Removes ALL current temp bans
-[-] !ungag <nickname>                  Un-mute a gagged user
-[-] !unhidekick <nickname_list         Show kick message again. Remove !hidekick action
-[-] !unkvip  <nickname>                Remove kick privilege from the user
-[-] !unmayopchat <nickname>            Revoke privilege to enter in the OPChat
-[-] !unmayreg <nickname>               Remove registration privilege from the user
-[-] !unnopm <nickname>                 Remove no-PM restriction
-[-] !unnosearch <nickname>             Remove search restriction
-[-] !vips <msg>                        Broadcast to VIPs (class 2)
-[-] !whoip <IP address>                Search users with given IP address
-[-] !whorange <lower IP>-<upper IP>    Shows nicknames in the given range of IP addresses
-[-] !whorange <IP>/<left mask bits>    Shows nicknames in the given subnet
+[-] !drop <nick>                        Disconnects user from hub without kicking him
+[-] !gag <nickname> [time]              Mute a user in main chat for the time specified (default is 7 days)
+[-] !gc                                 Prints a list of all configuration variables
+[-] !getinfo <nickname>                 Return IP address and hostname (if dns_lookup is set to 1)
+[-] !gethost <nickname>                 Return hostname (if dns_lookup is set to 1)
+[-] !guests <msg>                       Broadcast to guests (class 0)
+[-] !hidekick <nick> <reason>           Kicks a user and does not announce it to the hub
+[-] !hideme <class>                     Hides yourself from users below the specified class
+[-] !hubinfo                             Show information about the hub
+[-] !hublist                            Send your hub information to the public hublist
+[-] !infoban <keyword>                  Lists all possible matches for what you entered as keyword (nick, IP, range). 
+[-] !infobanip <ip>                     Lists all bans for specifyed IP
+[-] !infobannnick <nick>                Lists all bans for specifyed nickname
+[-] !infobanrange <ip>                  Lists all bans for specifyed IP that belongs to a range
+[-] !infoban_banrange_                  Shows all current banned ranges
+[-] !infoban_ipban_                     Shows all current IP bans
+[-] !infoban_nickban_                   Shows all current nickbans
+[-] !kick <nick> <reason>               Kick a users temporarily, so user will not be able to rejoin until a number of seconds will expire
+[-] !kvip <nickname> [time]             Let user to kick other usersfor the time specified (default is 7 days)
+[-] !lsban <limit>                      Shows the most recent bans. Use <limit> to limit results
+[-] !masters <msg>                      Broadcast to masters (class 10)
+[-] !mayopchat <nick> [time]            Allows user to enter in the OPChat for the time specified (default is 7 days)
+[-] !mayreg <nickname> [time]           Allow user to register other users for the time specified (default is 7 days)
+[-] !nopm <nickname> [time]             Prevent a user from send private messages for the time specified (default is 7 days)
+[-] !nosearch <nickname> [time]         Prevent users from searching for the time specified (default is 7 days)
+[-] !ops <msg>                          Broadcast to operators (class 3)
+[-] !regclass <nickname> <new_class>    Change the class of a user based on given nickname
+[-] !regdelete <nickname>               Removing a registered user based on given nickname
+[-] !regdisable <nickname>              Temporarily disable a registered nickname without permanently removing it from the database
+[-] !regenable <nickname>               Enable a temporarily disabled user with !regdisable command
+[-] !reginfo <nickname>                 See all information about a registered user
+[-] !regnewuser <nickname> <class>      Register a new user with given class
+[-] !regpass <nickname> <password>      Set user password
+[-] !regprotect <nickname> <class>      Protect a user from the class minor or equal of the given value
+[-] !regs <msg>                         Broadcast to registered users (class 1)
+[-] !reload                             Reloads verlihub's configuration
+[-] !set <variable> <new_value>         Change value of variables
+[-] !topic <topic>                      Change the topic shown in the top of the client window
+[-] !unban <ip_or_nick> <reason>        Removes ban(s) from nickname or IP
+[-] !unbanemail <email> <reason>        Removes a e-mail ban
+[-] !unbannick <nick> <reason>          Removes nickname ban(s)
+[-] !unbanhost1 <hostname> <reason>     Removes a first level hostname ban
+[-] !unbanhost2 <hostname> <reason>     Removes a second level hostname ban
+[-] !unbanhost3 <hostname> <reason>     Removes a third level hostname ban
+[-] !unbanhostr1 <hostname> <reason>    Removes the leftmost part of a hostname ban
+[-] !unbanip <ip> <reason>              Removes only existing ban(s) for IP
+[-] !unbanprefix <prefix> <reason>      Removes a nickname prefix ban
+[-] !unbanshare <share> <reason>        Removes a share size ban. Specify the exact share in bytes
+[-] !unbanrange <range> <reason>        Removes a range of IP bans. <range> may be the range, or any IP in the range
+[-] !unban emailban <reason>            Removes ALL current e-mail bans
+[-] !unban hostban <reason>             Removes ALL current host bans
+[-] !unban ipban <reason>               Removes ALL current IP bans
+[-] !unban nickban <reason>             Removes ALL current nick bans
+[-] !unban rangeban <reason>            Removes ALL current range bans
+[-] !unban shareban <reason>            Removes ALL current share bans
+[-] !unban tempban <reason>             Removes ALL current temp bans
+[-] !ungag <nickname>                   Un-mute a gagged user
+[-] !unhidekick <nickname_list          Show kick message again. Remove !hidekick action
+[-] !unkvip  <nickname>                 Remove kick privilege from the user
+[-] !unmayopchat <nickname>             Revoke privilege to enter in the OPChat
+[-] !unmayreg <nickname>                Remove registration privilege from the user
+[-] !unnopm <nickname>                  Remove no-PM restriction
+[-] !unnosearch <nickname>              Remove search restriction
+[-] !vips <msg>                         Broadcast to VIPs (class 2)
+[-] !whoip <IP address>                 Search users with given IP address
+[-] !whorange <lower IP>-<upper IP>     Shows nicknames in the given range of IP addresses
+[-] !whorange <IP>/<left mask bits>     Shows nicknames in the given subnet
