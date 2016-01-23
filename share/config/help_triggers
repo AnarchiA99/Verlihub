@@ -1,75 +1,10 @@
 
 --------------------
-[--] Manage triggers
+[--] Manage triggers - link_wiki_triggers
 --------------------
 [-] !lsttrigger  List available triggers
-[-] !addtrigger <trigger> [ -d <definition> ] [ -h <description help> ] [ -f <flags> ] [ -n <send as nick> ] [ -c <min_class> ] [ -C <max_class> ]  Add a new trigger
-[-] !modtrigger <trigger> [ -d <definition> ] [ -h <description help> ] [ -f <flags> ] [ -n <send as nick> ] [ -c <min_class> ] [ -C <max_class> ]  Change a trigger
+[-] !addtrigger <trigger> <params>  Add a new trigger
+[-] !modtrigger <trigger> <params>  Change a trigger 
 [-] !deltrigger <trigger>  Remove a trigger
 [-] !htrigger  Show an help and available trigger flags
-
-[--] Here there is a explanation of command parameters:
-<trigger>: the name you want the trigger to be called
--d <definition>: the definition of the trigger. This can be point to a file on file system or it can be the trigger content (if the correct flags are specified). In this case you need to enclose the content in quotes. For i.e. -d "This is the trigger contents."
--h <description help>: this is not used by VerliHub. It is a simple note for OPs that describes what trigger does
--f <flags>: this is a flag bitset. These will govern how VerliHub will use the trigger and/or how it displays it to the user. See below for more information about available flags
--n <send as nick>: when VerliHub sends message to the main chat window, the trigger will appear to send from this nickname
--c <min_class>: the minimum user class allowed to use this trigger
--C <max_class>: the maximum user class allowed to use this trigger
---------------------
-[--] Flags
---------------------
-Number	                     Description
-0	         Send to main chat (visible to user only)
-1	         Execute command in the trigger
-2	         Message is sent to PM
-4	         Automatically execute trigger when user logs in
-8	         Execute trigger with +help/!help command
-16	         The definition of the trigger is the trigger content. Enclose it in quotes
-32	         Replace variables in the trigger. For more information see the list below
-64	         Message is sent to everyone in the main chat window
-
-[--] If you want to use more than one flag just sum them. For example:
--f 0:  send trigger only in main chat
--f 6:  send message to user on login, and in the PM window (2+4)
--f 10: trigger is executed on +help/!help and it sends in the PM window (8+2)
--f 14: send message on login and on +help/!help to a PM (4+8+2)
--f 50: use definition as trigger contents and send to PM window with variables (16+32+2)
--f 64: send to everyone in main chat window
---------------------
-[--] Variables
---------------------
-[--] You can use some variables in the trigger file or content that will be automatically replaced with special value. You can use this feature only if you set flag 32:
-%[NICK] - User's nickname
-%[SHARE] - User's share size in kilobytes
-%[SHAREPEAK] - User's share size maximum in kilobytes
-%[CC] - User's country code
-%[CN] - User's country name
-%[IP] - User's IP address
-%[CFG] - This is the configuration path of the hub (where it is located dbconfig file
-%[HOST] - User's hostmask (dns_lookup must be set to 1 for this to work)
-%[HUBNAME] - The hub name
-%[HUBDESC] - The description of the hub
-%[CLASS] - The class of the user who has run the command
-%[HUBTOPIC] - Hub topic
-%[USERS] - The number of users in the userlist
-%[USERS_ACTIVE] - The number of active users in the userlist
-%[USERS_PASSIVE] - The number of passive users in the userlist
-%[USERSPEAK] - Show max users reached by the hub
-%[TOTAL_SHARE] - Total amount shared in hub
-%[UPTIME] - Hub uptime
-%[VERSION] - Hub version
-%[VERSION_DATE] - Hub's release date
-%[PARALL] - All parameters written after command
-%[PAR1] - Only first parameter written after command
-%[END1] - The command itself and all parameters written after it
-%[ss] - Current seconds
-%[mm] - Current minutes
-%[HH] - Current hours
-%[DD] - Current day
-%[MM] - Current month
-%[YY] - Current year
-
-[--] When you use the definition as the actual trigger contents, you cannot use quotations in the text! Otherwise only a part of the message will be saved. You need to edit the database directly in this case.
-+motd, +help, +faq, +rules are always trigger so you can edit their behaviour setting different flags. For example, if you want to send the FAQ to a PM window use this command: !modtrigger +faq -f 2
 --------------------
