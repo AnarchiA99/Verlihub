@@ -1,6 +1,6 @@
 
 --------------------
-[--] ADMIN (class 5)
+[--] ADMIN (class 5) - https://github.com/Verlihub/verlihub/wiki/Commands
 --------------------
 [-] !addconntype <connection_type> <params>  Add the <connection_type> with their restrictions
 [-] !addtag <name> <params>         Adds a rule for the client
