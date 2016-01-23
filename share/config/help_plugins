@@ -1,6 +1,6 @@
 
 --------------------
-[--] Manage plugins
+[--] Manage plugins - https://github.com/Verlihub/verlihub/wiki/Plugins
 --------------------
 [-] !addplug <nick> -p <path> [-d desc] -a <autoload (0/1)>  Register new plugin. Nick is a short plugin nickname, path is a relative or absolute path to the plugin's binary, desc is an optional description and autoload set to 1 means that plugin will start with hubsoft
 [-] !delplug <nick>  Unregisters the plugin
