@@ -1,110 +1,84 @@
-plugman: this is the plugin manager for Verlihub
-lua: this allows you to use simple scripts written in LUA language (http://www.lua.org)
-python: this allows you to use scripts written with Python (http://www.python.org)
-forbid: this plugin allows you to filter main chat and private messages with forbidden words
-replacer: this plugin replaces given patterns in text. For example if someone types Windows in the main chat, you can have this plugin change it to Winblows
-floodprot: this plugin offers more control from users flooding the hub
-stats: this periodically saves statistics in the database (i.e. users, share, upload, searching, etc...)
-messanger: this plugin is used to send messages to offline users
-iplog: this logs IP addresses as users join and leave the hub
-chatroom: this will set up individual chatrooms for users. This would work similarly to OPChat. This is great if you have a multiple-language hub
-isp: this plugin allows you to check connection types, nickname prefixes, and minimum shares, among other things
-pisg: this plugin allows you to create log file to be used with pisg that is a statistics generator. You can see generated graphs about daily actitity, most active times, most active nicks and so on (http://pisg.sourceforge.net/)
-[--] Forbid(this plugin allows you to filter main chat and private messages with forbidden words)
-[-] !addforbid <pattern> [-C <max_class>] [-f <flags>] [-r <kick_reason>]	Adds a forbidden pattern. See below the table for more information regarding the parameters
-[-] 
-[-] 
-[-] 
-[-] 
-[-] 
-!addisp <iprange> <other_parameters>	Add new ISP. See below the table for more information regarding the parameters
-!addplug <nick> -p <path> [-d desc] -a <autoload (0/1)>	Register new plugin. Nick is a short plugin nickname, path is a relative or absolute path to the plugin's binary, desc is an optional description and autoload set to 1 means that plugin will start with hubsoft
-!addreplacer <word> <replacement word> <level of immunity>	Adds a word replacement. You can specify level of immunity so user with class equal or bigger than to given value will be immune to the word replacement
-!addroom <nick> [-CC <country code>] [-ac <min_auto_class>][-AC <max_auto_class>][-c <min_class>][-t <topic>]	Create a chatroom named nick. When specifying the nickname, make sure to respect nickname rules. See below the table for more information regarding the parameters
-!delforbid <pattern>	Deletes forbidden pattern
-!delisp <ipmin/iprange>	Deletes the given ISP. See below the table for more information regarding the parameters
-!delplug <nick>	Unregisters the plugin
-!delreplacer <word>	Removes an entry
-!delroom <nick>	Removes specified chat room
-!getreplacer	Lists words to replace
-!iplog <ip>	Shows log history for given IP address
-+invite <online_users_nick> <invite message>	Invites a person into the chatroom with an optional invitation message
-!lastip <nick> [ <limit=10>]	Shows last IP addresses for given nickname
-!lastnick <ip> [ <limit=10>]	Shows the last nicknames used by the given IP address
-+leave	User can use this command to leave the room; no messages from the chatroom will be received
-!lstplug	List the registered plugins
-!lstroom	Lists all available chatrooms
-!luainfo	Show information about running scripts
-!lstforbid	Lists forbidden patterns
-!lstisp	Give a list of ISPs
-!lualist	Lists loaded LUA scripts
-!luaload <script>	Loads specified LUA script using relative path to VerliHub config folder
-!lualog <enable (0/1)>	Enable or disable LUA debug when you load a new script
-!luareload <script / ID>	Reload a script, instead of using !luaunload and then !luaload or script ID as proposed with lualist command
-!luaunload <script / ID>	Unloads specified LUA script using relative path to VerliHub config folder or script ID as proposed with lualist command
-!luaversion	Show information about LUA library
-!modforbid <pattern>	Modifies forbidden pattern. See below the table for more information regarding the parameters
-!modisp <iprange> <other_parameters>	Edit existing ISP. See below the table for more information regarding the parameters
-+msgip <ip> <topic/subject> <message text>	Sends a message to IP and will be displayed next time they log in
-+msgsend <nick> <topic/subject> <message text>	Sends a message to given nickname and will be displayed next time they log in
-!nicklog <nick>	Show log history for given nickname
-!offplug <nick>	Turns the plugin off
-!onplug <nick>	Turns the plugin on
-+out <nick>	Excludes a user from the chatroom. This command is different from the previous one because can be used by OP to exclude a user from the room
-!pluglist all	List all loaded plugins
-!plugin <plugin_filename.so>	After you have compiled a plugin, you can use this command to load it. You need to specify the name of the plugin with its extension (.so). You can find all plugins in /usr/local/bin depending on installation prefix. For example to load hublist plugin use !plugin /usr/local/lib/libhublink_pi.so
-!plugout <plugin_name>	Unload a plugin use. You need to specify the plugin name that is available using the !pluglist all command. Remember not to include the plugin version
-!plugreload <plugin_name>	Reload a plugin. Use always the plugin name
-!pylist	Lists loaded Python scripts
-!pyload <script>	Loads specified Python script using relative path to VerliHub config folder
-!pylog <enable (0/1)>	Enable or disable Python debug when you load a new script
-!pyreload <script / ID>	Reload a script, instead of using !pyunload and then !pyload or script ID as proposed with lualist command
-!pyunload <script / ID>	Unloads specified Python script using relative path to VerliHub config folder or script ID as proposed with lualist command
-!replug <nick>	Reloads the plugin, turning it off then on
 
-
-
-
-
-
-
-
-
-
-
-PLUGINS
-
-!addconntype <connection_type> <params>	Add the <connection_type> with their restrictions
-
-!addtag <name> <params>			Adds a rule for the client
-
-!addtrigger <trigger> <params>		Adds a new trigger
-
-!delconntype <connection_type>		Remove specified <connection_type>
-
-!deltag <name>				Remove a client
-
-!deltrigger <trigger>			Remove a trigger
-
-!htag					Shows help
-
-!htrigger				Show an help and available trigger flags
-
-!lstconntype				Shows the current connection type and their restrictions
-
-!lsttag					Lists available clients
-
-!lsttrigger				Lists available triggers
-
-!modconntype <conn_type> <params>	Update the <connection_type> with their restrictions
-
-!modtrigger <trigger> <params>		Change a trigger
-
-
-
-!lstplug	List the registered plugins
-!addplug <nick> -p <path> [-d desc] -a <autoload (0/1)>	Register new plugin. Nick is a short plugin nickname, path is a relative or absolute path to the plugin's binary, desc is an optional description and autoload set to 1 means that plugin will start with hubsoft
-!delplug <nick>	Unregisters the plugin
-!onplug <nick>	Turns the plugin on
-!offplug <nick>	Turns the plugin off
-!replug <nick>	Reloads the plugin, turning it off then on
+--------------------
+[--] Manage plugins
+--------------------
+[-] !addplug <nick> -p <path> [-d desc] -a <autoload (0/1)>	Register new plugin. Nick is a short plugin nickname, path is a relative or absolute path to the plugin's binary, desc is an optional description and autoload set to 1 means that plugin will start with hubsoft
+[-] !delplug <nick>	Unregisters the plugin
+[-] !lstplug	List the registered plugins
+[-] !offplug <nick>	Turns the plugin off
+[-] !onplug <nick>	Turns the plugin on
+[-] !pluglist all	List all loaded plugins
+[-] !plugin <plugin_filename.so>	After you have compiled a plugin, you can use this command to load it. You need to specify the name of the plugin with its extension (.so). You can find all plugins in /usr/local/bin depending on installation prefix. For example to load hublist plugin use !plugin /usr/local/lib/libhublink_pi.so
+[-] !plugout <plugin_name>	Unload a plugin use. You need to specify the plugin name that is available using the !pluglist all command. Remember not to include the plugin version
+[-] !plugreload <plugin_name>	Reload a plugin. Use always the plugin name
+[-] !replug <nick>	Reloads the plugin, turning it off then on
+--------------------
+[--] Chatroom
+--------------------
+[-] !addroom <nick> [-CC <country code>] [-ac <min_auto_class>][-AC <max_auto_class>][-c <min_class>][-t <topic>]	Create a chatroom named nick. When specifying the nickname, make sure to respect nickname rules. See below the table for more information regarding the parameters
+[-] !delroom <nick>	Removes specified chat room
+[-] !lstroom	Lists all available chatrooms
+[-] +invite <online_users_nick> <invite message>	Invites a person into the chatroom with an optional invitation message
+[-] +leave	User can use this command to leave the room; no messages from the chatroom will be received
+[-] +out <nick>	Excludes a user from the chatroom. This command is different from the previous one because can be used by OP to exclude a user from the room
+--------------------
+[--] Floodprot
+--------------------
+The plugin does not provide any commands but it will add three new configuration variables:
+[-] max_conn_per_ip  represents the maximum number of connection per IP. Set to 1 to allow one IP per user
+[-] max_users_per_ip  represents the maximum number of users per IP. Set to 1 to allow one IP per user
+[-] bantime_on_flood  number of seconds to ban the flooder
+--------------------
+[--] Forbid
+--------------------
+[-] !addforbid <pattern> [-C <max_class>] [-f <flags>] [-r <kick_reason>] Adds a forbidden pattern. See below the table for more information regarding the parameters
+[-] !delforbid <pattern>	Deletes forbidden pattern
+[-] !modforbid <pattern>	Modifies forbidden pattern. See below the table for more information regarding the parameters
+[-] !lstforbid	Lists forbidden patterns
+--------------------
+[--] Ip log
+--------------------
+[-] !iplog <ip>	Shows log history for given IP address
+[-] !lastip <nick> [ <limit=10>]	Shows last IP addresses for given nickname
+[-] !lastnick <ip> [ <limit=10>]	Shows the last nicknames used by the given IP address
+[-] !nicklog <nick>	Show log history for given nickname
+--------------------
+[--] Isp
+--------------------
+[-] !addisp <iprange> <other_parameters>	Add new ISP. See below the table for more information regarding the parameters
+[-] !delisp <ipmin/iprange>	Deletes the given ISP. See below the table for more information regarding the parameters
+[-] !modisp <iprange> <other_parameters>	Edit existing ISP. See below the table for more information regarding the parameters
+[-] !lstisp	Give a list of ISPs
+--------------------
+[--] Lua
+--------------------
+[-] !luaload <script>	Loads specified LUA script using relative path to VerliHub config folder
+[-] !luaunload <script / ID>	Unloads specified LUA script using relative path to VerliHub config folder or script ID as proposed with lualist command
+[-] !luareload <script / ID>	Reload a script, instead of using !luaunload and then !luaload or script ID as proposed with lualist command
+[-] !lualist	Lists loaded LUA scripts
+[-] !lualog <enable (0/1)>	Enable or disable LUA debug when you load a new script
+[-] !luainfo	Show information about running scripts
+[-] !luaversion	Show information about LUA library
+--------------------
+[--] Messanger
+--------------------
+[-] +msgip <ip> <topic/subject> <message text>	Sends a message to IP and will be displayed next time they log in
+[-] +msgsend <nick> <topic/subject> <message text>	Sends a message to given nickname and will be displayed next time they log in
+--------------------
+[--] Python
+--------------------
+[-] !pyload <script>	Loads specified Python script using relative path to VerliHub config folder
+[-] !pyunload <script / ID>	Unloads specified Python script using relative path to VerliHub config folder or script ID as proposed with lualist command
+[-] !pyreload <script / ID>	Reload a script, instead of using !pyunload and then !pyload or script ID as proposed with lualist command
+[-] !pylist	Lists loaded Python scripts
+[-] !pylog <enable (0/1)>	Enable or disable Python debug when you load a new script
+--------------------
+[--] Replacer
+--------------------
+[-] !addreplacer <word> <replacement word> <level of immunity>	Adds a word replacement. You can specify level of immunity so user with class equal or bigger than to given value will be immune to the word replacement
+[-] !delreplacer <word>	Removes an entry
+[-] !getreplacer	Lists words to replace
+--------------------
+[--] Stats
+--------------------
+[-] No command is available for this plugin. Plugins periodically saves statistics in the database (i.e. users, share, upload, searching, etc...) 
