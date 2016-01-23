@@ -14,6 +14,9 @@ pisg: this plugin allows you to create log file to be used with pisg that is a s
 [-] !addforbid <pattern> [-C <max_class>] [-f <flags>] [-r <kick_reason>]	Adds a forbidden pattern. See below the table for more information regarding the parameters
 [-] 
 [-] 
+[-] 
+[-] 
+[-] 
 !addisp <iprange> <other_parameters>	Add new ISP. See below the table for more information regarding the parameters
 !addplug <nick> -p <path> [-d desc] -a <autoload (0/1)>	Register new plugin. Nick is a short plugin nickname, path is a relative or absolute path to the plugin's binary, desc is an optional description and autoload set to 1 means that plugin will start with hubsoft
 !addreplacer <word> <replacement word> <level of immunity>	Adds a word replacement. You can specify level of immunity so user with class equal or bigger than to given value will be immune to the word replacement
