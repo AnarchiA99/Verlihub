@@ -84,3 +84,4 @@
 [-] !whoip <IP address>                 Search users with given IP address
 [-] !whorange <lower IP>-<upper IP>     Shows nicknames in the given range of IP addresses
 [-] !whorange <IP>/<left mask bits>     Shows nicknames in the given subnet
+--------------------
