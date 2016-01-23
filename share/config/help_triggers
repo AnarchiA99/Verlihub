@@ -37,7 +37,7 @@ Number	                     Description
 -f 50: use definition as trigger contents and send to PM window with variables (16+32+2)
 -f 64: send to everyone in main chat window
 --------------------
-Variables
+[--] Variables
 --------------------
 [--] You can use some variables in the trigger file or content that will be automatically replaced with special value. You can use this feature only if you set flag 32:
 %[NICK] - User's nickname
@@ -72,3 +72,4 @@ Variables
 
 [--] When you use the definition as the actual trigger contents, you cannot use quotations in the text! Otherwise only a part of the message will be saved. You need to edit the database directly in this case.
 +motd, +help, +faq, +rules are always trigger so you can edit their behaviour setting different flags. For example, if you want to send the FAQ to a PM window use this command: !modtrigger +faq -f 2
+--------------------
