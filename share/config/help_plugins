@@ -82,3 +82,4 @@ The plugin does not provide any commands but it will add three new configuration
 [--] Stats
 --------------------
 [-] No command is available for this plugin. Plugins periodically saves statistics in the database (i.e. users, share, upload, searching, etc...) 
+--------------------
