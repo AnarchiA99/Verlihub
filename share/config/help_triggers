@@ -2,9 +2,9 @@
 --------------------
 [--] Manage triggers - link_wiki_triggers
 --------------------
-[-] !lsttrigger  List available triggers
 [-] !addtrigger <trigger> <params>  Add a new trigger
-[-] !modtrigger <trigger> <params>  Change a trigger 
 [-] !deltrigger <trigger>  Remove a trigger
 [-] !htrigger  Show an help and available trigger flags
+[-] !lsttrigger  List available triggers
+[-] !modtrigger <trigger> <params>  Change a trigger 
 --------------------
