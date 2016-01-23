@@ -7,8 +7,8 @@
 [-] !lstplug  List the registered plugins
 [-] !offplug <nick>  Turns the plugin off
 [-] !onplug <nick>  Turns the plugin on
-[-] !pluglist all  List all loaded plugins
 [-] !plugin <plugin_filename.so>  After you have compiled a plugin, you can use this command to load it. You need to specify the name of the plugin with its extension (.so). You can find all plugins in /usr/local/bin depending on installation prefix. For example to load hublist plugin use !plugin /usr/local/lib/libhublink_pi.so
+[-] !pluglist all  List all loaded plugins
 [-] !plugout <plugin_name>  Unload a plugin use. You need to specify the plugin name that is available using the !pluglist all command. Remember not to include the plugin version
 [-] !plugreload <plugin_name>  Reload a plugin. Use always the plugin name
 [-] !replug <nick>  Reloads the plugin, turning it off then on
@@ -17,9 +17,9 @@
 --------------------
 [-] !addroom <nick> [-CC <country code>] [-ac <min_auto_class>][-AC <max_auto_class>][-c <min_class>][-t <topic>]  Create a chatroom named nick. When specifying the nickname, make sure to respect nickname rules. See below the table for more information regarding the parameters
 [-] !delroom <nick>  Removes specified chat room
+[-] !lstroom  Lists all available chatrooms
 [-] +invite <online_users_nick> <invite message>  Invites a person into the chatroom with an optional invitation message
 [-] +leave  User can use this command to leave the room; no messages from the chatroom will be received
-[-] !lstroom  Lists all available chatrooms
 [-] +out <nick>  Excludes a user from the chatroom. This command is different from the previous one because can be used by OP to exclude a user from the room
 --------------------
 [--] Floodprot
