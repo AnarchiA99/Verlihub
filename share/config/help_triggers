@@ -1,6 +1,6 @@
 
 --------------------
-[--] Manage triggers - link_wiki_triggers
+[--] Manage triggers - https://github.com/Verlihub/verlihub/wiki/Messages#file-triggers
 --------------------
 [-] !addtrigger <trigger> <params>  Add a new trigger
 [-] !deltrigger <trigger>  Remove a trigger
