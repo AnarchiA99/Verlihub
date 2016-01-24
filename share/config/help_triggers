@@ -2,9 +2,4 @@
 --------------------
 [--] Manage triggers - https://github.com/Verlihub/verlihub/wiki/Messages#file-triggers
 --------------------
-[-] !addtrigger <trigger> <params>  Add a new trigger
-[-] !deltrigger <trigger>  Remove a trigger
-[-] !htrigger  Show an help and available trigger flags
-[-] !lsttrigger  List available triggers
-[-] !modtrigger <trigger> <params>  Change a trigger 
---------------------
+
