@@ -26,7 +26,7 @@
 [-] !guests <msg>                       Broadcast to guests (class 0)
 [-] !hidekick <nick> <reason>           Kicks a user and does not announce it to the hub
 [-] !hideme <class>                     Hides yourself from users below the specified class
-[-] !hubinfo                             Show information about the hub
+[-] !hubinfo                            Show information about the hub
 [-] !hublist                            Send your hub information to the public hublist
 [-] !infoban <keyword>                  Lists all possible matches for what you entered as keyword (nick, IP, range). 
 [-] !infobanip <ip>                     Lists all bans for specifyed IP
