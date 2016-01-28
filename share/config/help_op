@@ -1,4 +1,14 @@
 
 --------------------
-[--] OPERATOR (class 3) - https://github.com/Verlihub/verlihub/wiki/Commands#operator-class-3
+OPERATOR (class 3)
 --------------------
+!banip_time <ip> <reason>   Bans IP address only. See !ban command to format _time string
+!bannick_time <nick> <reason>   Bans a nick only. See !ban command to format _time string
+!drop <nick>   Disconnects user from hub without giving him a reason and without banning him
+!getinfo <nickname>   Return IP address and hostname (if dns_lookup is set to 1)
+!kick <nick> <reason>   Kick a users temporarily, so user will not be able to rejoin until a number of seconds will expire
+!regnewuser <nickname> <class> [password]   Register a new user with given class. Password is optional
+!regpass <nickname> <password>   Set user password
+unbannick <nick> <reason>   Removes nickname ban(s)
+!unbanip <ip> <reason>   Removes only existing ban(s) for IP
+For complete list of commands visit - https://github.com/Verlihub/verlihub/wiki/Manual-Commands#operator-class-3
