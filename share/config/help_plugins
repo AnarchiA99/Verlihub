@@ -1,4 +1,6 @@
 
 --------------------
-[--] Manage plugins - https://github.com/Verlihub/verlihub/wiki/Plugins
+Manage plugins
 --------------------
+!pluglist all   List all loaded plugins
+For complete list of commands visit - https://github.com/Verlihub/verlihub/wiki/Manual-Plugins
