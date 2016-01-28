@@ -2,5 +2,5 @@
 --------------------
 GUEST USERS (class 0)
 --------------------
-+passwd	Set your password
++regme   Send a message to all OPs, asking them to register your nick
 For complete list of commands visit - https://github.com/Verlihub/verlihub/wiki/Manual-Commands#guest-users-class-0
