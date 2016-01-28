@@ -1,4 +1,8 @@
 
 --------------------
-[--] ADMIN (class 5) - https://github.com/Verlihub/verlihub/wiki/Commands#admin-class-5
+ADMIN (class 5)
 --------------------
+!cleanbanlist   Truncate ban table
+!cleankicklist   Truncate kick table
+!ul <user_limit> [time_in_minutes]   Temporarily change the max_users variable to given limit. If time (in minutes) is not specified, it will be assumed 1 hour
+For complete list of commands visit - https://github.com/Verlihub/verlihub/wiki/Manual-Commands#admin-class-5
